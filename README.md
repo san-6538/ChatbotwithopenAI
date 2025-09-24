@@ -1,29 +1,16 @@
-# OpenAI RAG Chatbot - RAG + Agent Chatbot
+A RAG (Retrieval-Augmented Generation) chatbot for medical queries, integrated with a PDF medical encyclopedia.
+The backend is built using FastAPI and LangChain, with OpenAI GPT for responses.
 
-## 🚀 Overview
-This project is a Retrieval-Augmented Generation (RAG) chatbot with agent capabilities.  
-It has:
-- **FastAPI backend**
-- **Streamlit frontend**
-- **RAG pipeline with embeddings + vector search**
-- **Agent integration**
+Features
 
----
+Loads a PDF medical encyclopedia as context.
 
-## 🐳 Docker Setup
+Splits PDF into chunks and stores embeddings in a FAISS vector database.
 
-### Build Image
-```bash
-docker build -t openai-chatbot .
-```
+Uses RAG approach: retrieves relevant context and answers queries.
 
-### Run Container
-```bash
-docker run -p 8000:8000 -e OPENAI_API_KEY=your_api_key openai-chatbot
-```
+Maintains user-specific chat history using LangChain memory.
 
----
+Returns answers and top source snippets.
 
-## 🔎 Endpoints
-- FastAPI backend: `http://localhost:8000`
-- Streamlit UI: `streamlit run ui.py`
+Ready for integration with Seva frontend.
