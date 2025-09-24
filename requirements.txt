@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 langchain
-langchain-community
-langchain-openai
-sentence-transformers
-streamlit
+openai
+faiss-cpu
+python-dotenv
+pypdf
